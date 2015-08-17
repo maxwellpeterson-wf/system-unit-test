@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title ng-bind="$root.title"></title>
+    <meta content="" name="description">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<base href="/">-->
+</head>
+<body>
+<ui-view flex layout="column" layout-fill style="max-height: 100%"></ui-view>
+
+<!-- development -->
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script>
+    System.import('app').catch(console.error.bind(console));
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": 1,
+        "jquery": 1,
+        "jasmine": 1,
+        "prototypejs": 1
+    },
+    "globals": {
+        "angular": 1
+    },
+    "rules": {
+        "quotes": [
+            2,
+            "single"
+        ],
+        "no-use-before-define": 0,
+        "no-underscore-dangle": 0
+    }
+}

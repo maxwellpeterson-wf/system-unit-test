@@ -1,0 +1,37 @@
+#cashierLogin {
+
+    md-input-container {
+        font-size: 2rem;
+    }
+
+    .numberPad > div[layout-margin] > .md-button {
+        margin-left: 2.6rem;
+        margin-right: 2.6rem;
+    }
+
+    .numberPad > div[layout-margin] {
+        line-height: 1;
+    }
+    .location {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .numberPad > div[layout-margin] > .md-button > span {
+        font-size: 3.2rem;
+    }
+
+    @media screen and (max-width: 350px) {
+        .numberPad {
+            > div[layout-margin] > .md-button {
+                margin-left: 1.8rem;
+                margin-right: 1.8rem;
+            }
+        }
+    }
+    @media screen and (max-height: 499px) {
+        [layout-margin], [layout-margin] > [flex] {
+            margin: .5rem;
+        }
+    }
+
+}

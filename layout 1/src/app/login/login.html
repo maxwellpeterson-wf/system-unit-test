@@ -1,0 +1,72 @@
+<md-content background-gray flex id="cashierLogin" layout="column" layout-align="start center" layout-padding
+            no-padding-bottom>
+    <div class="md-body-1">
+        <span>Location:</span>
+        <span ng-bind="vm.location"></span>
+    </div>
+
+    <form name="loginForm" onsubmit=" return false; ">
+        <md-input-container id="inputPin">
+            <label>Cashier PIN</label>
+
+            <input auto-focus format-number name="pin" ng-model="vm.pin" ng-required="true" type="text">
+
+            <div ng-messages="loginForm.pin.$error">
+                <div ng-message="required">Your PIN is required.</div>
+            </div>
+        </md-input-container>
+        <section layout="row" layout-align="center center" layout-sm="column">
+            <div class="numberPad" flex layout="column">
+                <div flex layout="row" layout-margin>
+                    <md-button aria-label="1" class="md-fab md-primary" ng-click="vm.numPadKeyPress('1')" type="button">
+                        1
+                    </md-button>
+                    <md-button aria-label="2" class="md-fab md-primary" ng-click="vm.numPadKeyPress('2')" type="button">
+                        2
+                    </md-button>
+                    <md-button aria-label="3" class="md-fab md-primary" ng-click="vm.numPadKeyPress('3')" type="button">
+                        3
+                    </md-button>
+                </div>
+                <div flex layout="row" layout-margin>
+                    <md-button aria-label="4" class="md-fab md-primary" ng-click="vm.numPadKeyPress('4')" type="button">
+                        4
+                    </md-button>
+                    <md-button aria-label="5" class="md-fab md-primary" ng-click="vm.numPadKeyPress('5')" type="button">
+                        5
+                    </md-button>
+                    <md-button aria-label="6" class="md-fab md-primary" ng-click="vm.numPadKeyPress('6')" type="button">
+                        6
+                    </md-button>
+                </div>
+                <div flex layout="row" layout-margin>
+                    <md-button aria-label="7" class="md-fab md-primary" ng-click="vm.numPadKeyPress('7')" type="button">
+                        7
+                    </md-button>
+                    <md-button aria-label="8" class="md-fab md-primary" ng-click="vm.numPadKeyPress('8')" type="button">
+                        8
+                    </md-button>
+                    <md-button aria-label="9" class="md-fab md-primary" ng-click="vm.numPadKeyPress('9')" type="button">
+                        9
+                    </md-button>
+                </div>
+                <div flex layout="row" layout-margin>
+                    <md-button aria-label="backspace" class="md-fab md-warn" ng-click="vm.backspace();"
+                               ng-disabled="vm.pin.length < 1 || vm.pin === undefined" type="button">
+                        <md-tooltip>Backspace</md-tooltip>
+                        <md-icon>backspace</md-icon>
+                    </md-button>
+                    <md-button aria-label="0" class="md-fab md-primary" ng-click="vm.numPadKeyPress('0')" type="button">
+                        0
+                    </md-button>
+                    <md-button aria-label="Sign in" class="md-accent md-fab"
+                               ng-click="loginForm.$invalid || vm.showLoginToast();" ng-disabled="loginForm.$invalid"
+                               type="submit">
+                        <md-tooltip>Sign in</md-tooltip>
+                        <md-icon>done</md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </section>
+    </form>
+</md-content>

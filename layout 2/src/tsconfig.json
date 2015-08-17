@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "target": "es5",
+        "module": "amd",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "outDir" : "../.build/app"
+    }
+}

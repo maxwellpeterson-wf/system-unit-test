@@ -1,0 +1,8 @@
+[
+    {
+        "stateName": "login",
+        "urlPrefix": "/login",
+        "type": "load",
+        "src": "app/login"
+    }
+]

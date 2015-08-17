@@ -1,0 +1,148 @@
+{
+    "moduleName": "app",
+    "appId": "com.app",
+    "mainModule": "app.module",
+    "jshintrc": ".jshintrc",
+    "tslintrc": "tslint.json",
+    "karma": "karma.conf.js",
+    "system": "./.build/config.js",
+    "path": {
+        "root": "./",
+        "src": "./src/",
+        "srcApp": "./src/app/",
+        "assets": "./src/assets/",
+        "tsd": "./src/typings/",
+        "dist": "./.dist/",
+        "distApp": "./.dist/app",
+        "distAssets": "./.dist/assets/",
+        "build": "./.build/",
+        "buildApp": "./.build/app/",
+        "buildAssets": "./.build/assets/",
+        "routes": "./src/app/routes.json",
+        "e2e": "./e2e/",
+        "coverage": "./.report/coverage/",
+        "report": "./.report/",
+        "complexity": "./report/complexity/",
+        "docs": "./.docs/",
+        "cordova": ".cordova",
+        "apk": "./apk/"
+    },
+    "glob": {
+        "all": "**/*",
+        "css": "**/*.css",
+        "js": "**/*.js",
+        "ts": "**/*.ts",
+        "tsd": "**/*.d.ts",
+        "html": "**/*.html",
+        "scss": "**/*.scss",
+        "sources": [
+            "**/*.ts",
+            "**/*.scss"
+        ],
+        "spec": "**/*.spec.js",
+        "nospec": "**/!(*.spec).js",
+        "mock": "**/*.mock.js"
+    },
+    "bundles": {},
+    "targets": {
+        "local": {
+            "minify": false,
+            "sourceMaps": true,
+            "sfx": false,
+            "depcache": false,
+            "split-sfx": true,
+            "lintHtml": true,
+            "lintTS": true,
+            "lintJS": true,
+            "test": true,
+            "docs": true,
+            "coverage": true
+        },
+        "dev": {
+            "minify": true,
+            "sourceMaps": true,
+            "sfx": true,
+            "depcache": true,
+            "split-sfx": true
+        },
+
+        "test": {
+            "minify": true,
+            "sourceMaps": false,
+            "sfx": true,
+            "depcache": true,
+            "split-sfx": true
+        },
+        "prod": {
+            "minify": true,
+            "sourceMaps": false,
+            "sfx": true,
+            "depcache": true,
+            "split-sfx": true
+        }
+    },
+    "server": {
+        "build": {
+            "port": 3000,
+            "startPath": "/"
+        },
+        "docs": {
+            "port": 3002,
+            "startPath": "/"
+        },
+        "coverage": {
+            "port": 3003,
+            "startPath": "/"
+        },
+        "complexity": {
+            "port": 3004,
+            "startPath": "/"
+        },
+        "dist": {
+            "port": 3005,
+            "startPath": "/"
+        }
+    },
+    "tsdOptions": {
+        "emitError": false,
+        "sort": true
+    },
+    "transforms": {
+        "authUrl": {
+            "file": "src/app/api/reflex/reflex.ts",
+            "find": "http://localhost:1337/api",
+
+            "replace": {
+                "local": "http://localhost:1337/api",
+                "dev": "http://ecapp.ptpos.com/OpDevMobile/api",
+                "test": "http://ecapp.ptpos.com/OpTestMobile/api",
+                "prod": "http://ecapp.ptpos.com/R5S1Mobile/api"
+            }
+        }
+    },
+    "sauceLabs": {
+        "testName": "Unit test run through wGulp",
+        "browsers": {
+            "sauceChrome": {
+                "base": "SauceLabs",
+                "browserName": "chrome"
+            },
+            "sauceFirefox": {
+                "base": "SauceLabs",
+                "browserName": "firefox"
+            },
+            "sauceIosSafari": {
+                "base": "SauceLabs",
+                "browserName": "safari",
+                "platform": "OS X 10.9",
+                "version": "7"
+            },
+            "sauceIe11": {
+                "base": "SauceLabs",
+                "browserName": "internet explorer",
+                "platform": "Windows 7",
+                "version": "11"
+            }
+        }
+    }
+}

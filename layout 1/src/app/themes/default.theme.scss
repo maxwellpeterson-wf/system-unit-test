@@ -1,0 +1,83 @@
+// You must use md-default-theme or md-themname-theme in your selectors for themes to work properly.
+
+//Workarounds, these may not be needed in future versions of angular-material
+
+.md-default-theme.md-hue-2.md-warn.md-raised .material-icons,
+.md-default-theme.md-hue-2.md-warn.md-fab .material-icons {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.md-accent md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .material-icons {
+    color: #517051;
+}
+
+//End workarounds
+
+md-list-item.active {
+    background-color: #d0d0d0;
+}
+
+.discount, .balance-due, .error {
+    color: #b42747;
+}
+
+.credit {
+    color: #739e73;
+}
+
+.tender-button.md-default-theme .material-icons {
+    color: #5d805d;
+}
+
+md-toolbar.md-default-theme.grey {
+    background-color: #474544;
+}
+
+//md-tooltip.md-default-theme .md-background {
+//    background-color: rgba(0, 0, 0, 0.75)
+//}
+
+//.md-default-theme.md-hue-3 .material-icons {
+//    color: rgba(0, 0, 0, 0.87);
+//}
+
+.num10Key {
+    .md-button.md-default-theme.md-raised {
+        color: #23537d;
+    }
+}
+
+.avatar {
+    background-color: #7D7C7C;
+}
+
+md-sidenav {
+    md-divider.md-default-theme {
+        border-top-color: rgba(255, 255, 255, 0.12);
+    }
+
+    md-content.md-default-theme {
+        background-color: #3a3633
+    }
+
+    md-list.md-default-theme {
+        color: #a8a8a8;
+    }
+
+    .material-icons.md-default-theme {
+        color: #a8a8a8;
+    }
+
+    .md-button.md-default-theme.active {
+        background-color: rgba(158, 158, 158, 0.2);
+    }
+}
+
+.active {
+    background-color: #c7c7c7;
+}
+
+.nav-edit {
+    background-color: #8e24aa;
+
+}
