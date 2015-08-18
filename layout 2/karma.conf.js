@@ -8,7 +8,9 @@ module.exports = function(config) {
         frameworks: ['jspm', 'jasmine'],
         files: [
             // This is needed since SystemJS   depends on Function.bind(), which is not supported in PhantomJS.
-            'node_modules/phantomjs-polyfill/bind-polyfill.js'
+            'node_modules/phantomjs-polyfill/bind-polyfill.js',
+            'jspm_packages/github/angular/bower-angular@1.4.4/angular.js',
+            'jspm_packages/github/angular/bower-angular-mocks@1.4.4/angular-mocks.js'
         ],
 
 
@@ -34,12 +36,12 @@ module.exports = function(config) {
 
 
         jspm: {
-            config: ".build/config.js",
             serveFiles: [
-                '.build/app/**/*.js'],
+                'build/app/**/*.js'
+            ],
 
             loadFiles: [
-                'src/app/**/*.spec.js'
+                'build/app/**/*.spec.js'
             ],
             // paths: {
             //     '*': '.build/*.js',

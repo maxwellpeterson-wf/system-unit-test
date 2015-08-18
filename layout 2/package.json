@@ -73,7 +73,6 @@
   "format": "amd",
   "jspm": {
     "directories": {
-      "baseURL": ".build",
       "lib": "src"
     },
     "dependencies": {

@@ -487,7 +487,7 @@ gulp.task('test:auto', gulp.series('compile:build', function(done) {
 
 gulp.task('test:coverage:auto', gulp.series('test:auto', 'serve:coverage'));
 
-gulp.task('test', gulp.series('compile:build', function() {
+gulp.task('test', gulp.series(['compile:build', 'copy:tests'], function() {
     return runTests(false, true);
 }));
 
